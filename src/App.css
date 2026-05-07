@@ -1,0 +1,137 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 32px;
+  letter-spacing: 2px;
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-muted);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 40px;
+}
+
+.mode-tab {
+  border: none;
+  background: transparent;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.mode-tab.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.mode-tab:hover:not(.active) {
+  background: var(--hover);
+}
+
+.timer-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.progress-ring {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-ring-bg {
+  stroke: var(--bg-muted);
+}
+
+.progress-ring-fill {
+  stroke: var(--accent);
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.time {
+  font-size: 56px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 2px;
+}
+
+.mode-label {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--bg-muted);
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: var(--hover);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.session-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.session-progress {
+  font-size: 13px;
+  opacity: 0.7;
+}
